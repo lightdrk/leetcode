@@ -4,11 +4,15 @@ def subarr(nums):
         return [nums]
     possible = []
     for i in range(len(nums)):
-        for j in range(i+1,len(nums)+1):
-            possible.append(nums[i:j])
+        for j in range(i,len(nums)):
+            possible.append(nums[i:j+1])
     return possible
 
 print(subarr('abcabcbb'))
+print()
+
+print(subarr([1,2,3]))
+
 
 possiblity = []
 def recurSub(nums, start, end):
@@ -23,5 +27,5 @@ def recurSub(nums, start, end):
 
 
 
-recurSub([1,2,3,4],0,4)
+recurSub([1,2,3],0,4)
 print(possiblity)
