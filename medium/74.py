@@ -88,3 +88,22 @@ matrix = [
 ]
 target = 5
 print(searchMatrix(matrix, target))
+
+
+def searchMatrix(matrix: list[list[int]], target: int) ->bool:
+    if not matrix and not matrix[0]:
+        return False
+    col = len(matrix[0])
+    left, right = 0, len(matrix)*col - 1 #row * col - 1 for right to flatten it
+    while left <= right:
+        mid = left + (right - left)//2
+        val = matrix[mid//col][mid%col]
+        if val == target:
+            return True
+        if val > target:
+            right = mid - 1
+        else:
+            left = mid + 1
+    return False
+
+
