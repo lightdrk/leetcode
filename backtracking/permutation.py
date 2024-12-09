@@ -9,7 +9,7 @@ def permuteString(s: str) ->list[str]:
     def backtracking(start,current):
         if start == len(s)-1:
             permutations.append(current)
-            return 
+            return
         for i in range(start, len(s)):
             current = swap(current, start, i)
             backtracking(start+1, current)
