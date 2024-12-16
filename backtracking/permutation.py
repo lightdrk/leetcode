@@ -28,10 +28,8 @@ def permute(nums):
             return
         for i in range(start, length):
             current[start],current[i] = current[i], current[start]
-            print(current)
             back(start+1, current)
             current[start],current[i] = current[i], current[start]
-            print(current)
     back(0,nums)
     return permut
 
