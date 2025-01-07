@@ -1,6 +1,6 @@
 class TrieNode:
     def __init__(self):
-        self.child = [None] *128 
+        self.child = [None] *128
         self.end = False
 
 class Trie:
