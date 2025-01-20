@@ -21,6 +21,7 @@ class Graph:
             self.vertex_data[vertex] = data
 
     def print_graph(self):
+        print(self.adj_matrix)
         for row in self.adj_matrix:
             print(' '.join(map(str, row)))
 
