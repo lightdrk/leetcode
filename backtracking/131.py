@@ -10,5 +10,5 @@ def part(s):
     bk('',0)
     return output
 
-print(part('aaabc'))
+print(part('aab'))
 
