@@ -8,19 +8,20 @@ def pacificAtlantic(heights: list[list]) ->list[list]:
         stack = [(i,j)]
         while stack:
             x,y = stack.pop()
+            curr = heights[x][y]
             for i,j in [(1,0),(-1,0),(0,1),(0,-1)]:
                 x+=i
                 y+=j
-                if 0 <= x <= row-1 and 0 <= y <= column-1 and not reach[x][y]:
+                if 0 <= x <= row-1 and 0 <= y <= column-1 and curr <= heights[x][y] and not reach[x][y]:
                     reach[x][y] = True
                     stack.append((x,y))
     for i in range(row):
         dfs(i,0,pac)
-        dfs(0,column-1,atl)
+        dfs(i,column-1,atl)
 
     for j in range(column):
+        print((0,j),(row-1,j))
         dfs(0,j,pac)
-        dfs(row-1,j,atl)
     print(atl)
     print(pac)
 
@@ -32,6 +33,7 @@ class Solution:
         atlantic = [[False] * column for _ in range(row)]
         pacific = [[False] * column for _ in range(row)]
         def dfs(i,j, reach):
+            reach[i][j] = True
             stack = [(i,j)]
             while stack:
                 x,y = stack.pop()
@@ -51,13 +53,19 @@ class Solution:
         output = []
 
         for i in range(row):
+            print((i,0),(i,column-1))
             dfs(i,0,pacific)
             dfs(i,column-1,atlantic)
         for j in range(column):
+            print((0,j),(row-1,j))
             dfs(0,j,pacific)
             dfs(row-1,j,atlantic)
-        print(pacific)
-        print(atlantic)
+        print('***pacific***')
+        for x in pacific:
+            print(x)
+        print('***atlantic***')
+        for y in atlantic:
+            print(y)
         for i in range(row):
             for j in range(column):
                 if pacific[i][j] and atlantic[i][j]:
@@ -66,5 +74,5 @@ class Solution:
         return output
 pacificAtlantic([[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]])
 a = Solution()
-a.pacificAtlantic([[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]])
+print(a.pacificAtlantic([[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]))
 
