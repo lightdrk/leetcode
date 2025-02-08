@@ -4,20 +4,18 @@ def redun(edges):
     for i,j in edges:
         graph[i].append(j)
         graph[j].append(i)
-    visited = [0]*(length+1)
-
-    st = [1]
+    visited = [False]*(length+1)
+    st = [(1,None)]
     output = []
     while st:
-        node = st.pop()
-        if visited[node] == 1:
-            continue
-        visited[node] = 1
+        node,parent = st.pop()
+        visited[node] = True
         for i in graph[node]:
-            if visited[i] == 1:
-                output.append([node,i])
-            else:
-                st.append(i)
+            if not visited[i]:
+                st.append((i,node))
+            if parent != i:
+                output.append([i,parent])
+
     print(output)
 
 redun([[1,2],[1,3],[2,3]])
