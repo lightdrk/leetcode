@@ -1,0 +1,1 @@
+def hex(binary):
