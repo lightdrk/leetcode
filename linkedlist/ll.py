@@ -6,7 +6,7 @@ class Node:
 
 root = None
 t = None
-for i in range(7):
+for i in range(3):
     tmp = Node(i)
     if not root:
         root = tmp
@@ -22,40 +22,17 @@ def log(root):
     print()
     return
 
+def test(n,root):
+    tmp = root
+    tmp_root = None
+    while tmp.next and tmp.next.val != n:
+        tmp = tmp.next
 
+    tmp_root = tmp.next
+    tmp.next = tmp.next.next
+    tmp_root.next = root
+    root = tmp_root
 
-tmp = root
-tmp_root = None
-while tmp.next and tmp.next.val != 2:
-    tmp = tmp.next
+    log(root)
 
-tmp_root = tmp.next
-tmp.next = tmp.next.next
-tmp_root.next = root
-root = tmp_root
-
-log(root)
-
-tmp = root
-tmp_root = None
-while tmp.next and tmp.next.val != 5:
-    tmp = tmp.next
-
-tmp_root = tmp.next
-tmp.next = tmp.next.next
-tmp_root.next = root
-root = tmp_root
-
-log(root)
-
-tmp = root
-tmp_root = None
-while tmp.next and tmp.next.val != 6:
-    tmp = tmp.next
-
-tmp_root = tmp.next
-tmp.next = tmp.next.next
-tmp_root.next = root
-root = tmp_root
-
-log(root)
+test(3,root)
