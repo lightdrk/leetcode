@@ -72,6 +72,7 @@ class TriE:
         return True
 
 
+
 words = ["mono", "dict", "hello", "thor", "repo", "dump", "!@#$0"]
 print(f"words List {words}")
 print("Trie with Array []")
