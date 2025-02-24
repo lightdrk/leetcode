@@ -10,22 +10,25 @@ def log(root):
         root = root.next
 
 def reverse(root,k):
-    if k == 0 or not root.next or not root:
-        return root
-    node = reverse(root.next, k-1)
+    if k == 1 or not root.next or not root:
+        return (root, root.next)
+    node,node_next = reverse(root.next, k-1)
     root.next.next = root
-    root.next = None
-    return node
+    root.next = node_next
+    return (node, node_next)
 
 root = Node(0)
 tmp = root
 for n in range(1,6):
     tmp.next = Node(n)
     tmp = tmp.next
-new = reverse(root, 2)
 
 log(root)
 print()
+
+new, root.next = reverse(root, 3)
+reverse(root,3)
 log(new)
+print()
 
 
