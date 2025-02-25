@@ -1,3 +1,16 @@
+def reverse(root,k):
+    if k == 1 and root:
+        return (root, root.next)
+    elif k >= 1 or not root:
+        return (None, None)
+    node, node_next = reverse(root.next, k-1)
+    if not node:
+        return (None, None)
+    root.next.next = root
+    root.next = node_next
+    return (node, node_next)
+
+
 class Node:
     def __init__(self,val, next=None):
         self.val = val
@@ -9,26 +22,11 @@ def log(root):
         print(root.val, end='->')
         root = root.next
 
-def reverse(root,k):
-    if k == 1 or not root.next or not root:
-        return (root, root.next)
-    node,node_next = reverse(root.next, k-1)
-    root.next.next = root
-    root.next = node_next
-    return (node, node_next)
-
-root = Node(0)
-tmp = root
-for n in range(1,6):
+head = Node(1)
+tmp = head
+for n in range(2):
     tmp.next = Node(n)
     tmp = tmp.next
-
-log(root)
-print()
-
-new, root.next = reverse(root, 3)
-reverse(root,3)
+k = 2
+new, _ = reverse(head,k)
 log(new)
-print()
-
-
