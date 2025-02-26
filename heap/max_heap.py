@@ -22,10 +22,10 @@ class heap:
         left = self.left(index)
         right = self.right(index)
 
-        if left < length and (self.hp[index] > self.hp[left]):
+        if left < length and (self.hp[largest] < self.hp[left]):
             largest = left
 
-        if right < length and (self.hp[index] > self.hp[right]):
+        if right < length and (self.hp[largest] < self.hp[right]):
             largest = right
 
         if largest != index:
@@ -54,19 +54,11 @@ class heap:
     def _print(self):
         print(self.hp)
 
-arr = heap()
-arr1 = heap()
+arr = [0,1,2,3,4,5,7,8,9]
+h = heap()
+for n in arr:
+    h.insert(n)
 
-for i in [10,5,20,3]:
-    arr1.insert(i)
-
-arr1.pop()
-arr1._print()
-
-for i in [10,5,20,3]:
-    arr.insert(i)
-
-
-arr._print()
-arr.pop()
-arr._print()
+h._print()
+for _ in range(9):
+    print(h.pop())
