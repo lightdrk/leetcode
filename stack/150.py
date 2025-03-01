@@ -1,11 +1,23 @@
-def eval(token):
-    st = []
-    operation = []
-    for s in token:
-        if s.isalnum():
-            st.append(int(s))
-        else:
-            operation.append(s)
-    print(st, operation)
+def eval(tokens):
+    stack = []
+    for n in tokens:
+        print(stack)
+        try:
+            stack.append(int(n))
+        except:
+            second = stack.pop()
+            first = stack.pop()
+            if n == '+':
+                first+=second
+            elif n == '-':
+                first-=second
+            elif n == '*':
+                first*=second
+            else:
+                first/=second
+            stack.append(int(first))
+    return stack[0]
 
-eval(["10","6","9","3","+","-11","*","/","*","17","+","5","+"])
+
+print(eval(["10","6","9","3","+","-11","*","/","*","17","+","5","+"]))
+
