@@ -9,6 +9,8 @@ def fourSum(nums: list[int], target: int):
             continue
         for idx in range(i+1,length):
             nx = nums[idx]
+            if idx > i+1 and nums[idx-1] == n:
+                continue
             left = idx+1
             right = length-1
             while left < right:
@@ -25,6 +27,5 @@ def fourSum(nums: list[int], target: int):
 
     return output
 
-
 print(fourSum([1,0,-1,0,-2,2],0))
-print(fourSum([2,2,2,2],8))
+print(fourSum([3,3,3,3,3],12))
