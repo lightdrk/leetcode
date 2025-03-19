@@ -1,0 +1,179 @@
+To master **prefix sum** techniques, it's helpful to practice a variety of problems that cover different use cases and complexities. Here is a comprehensive list of **prefix sum** problems, ranging from easy to medium, to help you strengthen your understanding:
+
+### **1. Basic Prefix Sum Problems**
+
+#### 1.1 **Find the Sum of All Elements in an Array**
+   - **Problem**: Given an array of integers, return the sum of all elements.
+   - **Example**:
+     ```python
+     Input: [1, 2, 3, 4]
+     Output: 10
+     ```
+   - **Concept**: This is the simplest form of prefix sum. Just sum all the elements using a single pass.
+
+#### 1.2 **Range Sum Query**
+   - **Problem**: Given an array `nums` and two indices `i` and `j`, return the sum of the elements in the array between `i` and `j` (inclusive).
+   - **Example**:
+     ```python
+     Input: nums = [1, 2, 3, 4, 5], i = 1, j = 3
+     Output: 9  # sum of [2, 3, 4]
+     ```
+   - **Concept**: Use prefix sum to store cumulative sums and calculate the range sum in constant time.
+
+---
+
+### **2. Subarray Sum Problems**
+
+#### 2.1 **Subarray Sum Equals K**
+   - **Problem**: Given an array of integers and a target integer `k`, return the number of continuous subarrays whose sum equals `k`.
+   - **Example**:
+     ```python
+     Input: nums = [1, 1, 1], k = 2
+     Output: 2
+     ```
+   - **Concept**: Use prefix sum and a hash map to store the cumulative sum and check for the presence of previous sums that satisfy the condition.
+
+#### 2.2 **Maximum Sum Subarray of Size K**
+   - **Problem**: Given an array `nums` and an integer `k`, find the maximum sum of a subarray of size `k`.
+   - **Example**:
+     ```python
+     Input: nums = [2, 1, 5, 1, 3, 2], k = 3
+     Output: 9
+     ```
+   - **Concept**: Use a sliding window approach or prefix sum to calculate subarray sums efficiently.
+
+#### 2.3 **Find Subarray with Sum Equal to Zero**
+   - **Problem**: Given an array, find if there is a subarray whose sum equals zero.
+   - **Example**:
+     ```python
+     Input: nums = [4, -2, 3, -3]
+     Output: True  # subarray [4, -2, -2] sums to 0
+     ```
+   - **Concept**: Use prefix sum and a hash map to track sums and detect when a sum repeats (indicating a subarray with sum zero).
+
+---
+
+### **3. Range Query Problems**
+
+#### 3.1 **Product of Array Except Self**
+   - **Problem**: Given an array `nums`, return an array such that each element is the product of all the numbers in `nums` except itself.
+   - **Example**:
+     ```python
+     Input: [1, 2, 3, 4]
+     Output: [24, 12, 8, 6]
+     ```
+   - **Concept**: Use two prefix sum arrays to store the products on the left and right side of each element.
+
+#### 3.2 **Range Sum Query (Immutable)**
+   - **Problem**: Implement a class `NumArray` that supports the method `sumRange(i, j)` to return the sum of the elements between indices `i` and `j` (inclusive).
+   - **Example**:
+     ```python
+     Input: nums = [-2, 0, 3, -5, 2, -1]
+     Output: numArray.sumRange(0, 2)  # Output: 1
+     ```
+   - **Concept**: Store prefix sums in an array to quickly compute the sum of any subarray.
+
+---
+
+### **4. Prefix Sum with Conditions**
+
+#### 4.1 **Find Pivot Index**
+   - **Problem**: Given an array of integers, find the index where the sum of elements to the left is equal to the sum of elements to the right.
+   - **Example**:
+     ```python
+     Input: nums = [1, 7, 3, 6, 5, 6]
+     Output: 3
+     ```
+   - **Concept**: Calculate the total sum of the array. Then, iterate through the array, maintaining a left sum, and check if the condition holds at each index.
+
+#### 4.2 **Count Subarrays with Sum Less than K**
+   - **Problem**: Given an array and an integer `k`, count how many subarrays have a sum less than `k`.
+   - **Example**:
+     ```python
+     Input: nums = [10, 5, 2, 6], k = 10
+     Output: 8  # subarrays are: [10], [5], [2], [6], [5, 2], [2, 6], [5, 2, 6]
+     ```
+   - **Concept**: Use a sliding window or prefix sum approach to efficiently count the subarrays.
+
+#### 4.3 **Find the Longest Subarray with Sum Equal to K**
+   - **Problem**: Given an array, find the length of the longest subarray that sums to `k`.
+   - **Example**:
+     ```python
+     Input: nums = [1, -1, 5, -2, 3], k = 3
+     Output: 4  # subarray [1, -1, 5, -2] has sum 3
+     ```
+   - **Concept**: Use prefix sum with a hash map to track sums and their indices.
+
+---
+
+### **5. Advanced Problems Using Prefix Sum**
+
+#### 5.1 **Maximum Difference Between Two Elements in an Array**
+   - **Problem**: Given an array, find the maximum difference between two elements such that the larger element appears after the smaller one.
+   - **Example**:
+     ```python
+     Input: [2, 3, 1, 5, 4]
+     Output: 4  # difference between 5 and 1
+     ```
+   - **Concept**: Use prefix sums to track the minimum and maximum values in subarrays efficiently.
+
+#### 5.2 **Find All Anagrams in a String**
+   - **Problem**: Given two strings `s` and `p`, find all the start indices of `p`'s anagrams in `s`.
+   - **Example**:
+     ```python
+     Input: s = "cbaebabacd", p = "abc"
+     Output: [0, 6]
+     ```
+   - **Concept**: Use prefix sums to track the frequency of characters and compare the substring frequencies.
+
+---
+
+### **6. Mixed Practice Problems**
+
+#### 6.1 **Count Number of Subarrays with Given XOR**
+   - **Problem**: Given an array and an integer `x`, find the number of subarrays whose XOR is equal to `x`.
+   - **Example**:
+     ```python
+     Input: nums = [4, 2, 2, 6, 4], x = 6
+     Output: 4  # subarrays that XOR to 6
+     ```
+   - **Concept**: Use prefix sum XOR to calculate the number of subarrays with the given XOR value.
+
+#### 6.2 **Subarray Sum with Even and Odd Numbers**
+   - **Problem**: Given an array, find the number of subarrays that have an even sum.
+   - **Example**:
+     ```python
+     Input: nums = [1, 2, 3, 4]
+     Output: 4
+     ```
+   - **Concept**: Use prefix sum to track even and odd sums and count the valid subarrays.
+
+#### 6.3 **Find Subarrays with Product Less Than K**
+   - **Problem**: Given an array of positive integers and a target product `k`, find how many subarrays have a product less than `k`.
+   - **Example**:
+     ```python
+     Input: nums = [10, 5, 2, 6], k = 100
+     Output: 8
+     ```
+   - **Concept**: Use a sliding window approach with prefix product to track the valid subarrays.
+
+---
+
+### **Bonus Challenge:**
+
+#### **7. Maximum Sum of Subarray Divisible by K**
+   - **Problem**: Given an array, find the maximum sum of any subarray whose sum is divisible by a given integer `k`.
+   - **Example**:
+     ```python
+     Input: nums = [3, 1, 4, 2, 1], k = 5
+     Output: 8  # subarray [3, 1, 4] sums to 8 and is divisible by 5
+     ```
+   - **Concept**: Use prefix sum modulo arithmetic to find subarrays whose sums are divisible by `k`.
+
+---
+
+By practicing these problems, you'll develop a strong understanding of **prefix sums** and how they can be used to solve a wide variety of problems. Some of these problems can be solved efficiently using **hash maps** or **sliding window techniques** combined with **prefix sums**. Try solving them step-by-step, and you'll build up your mastery!
+
+Feel free to ask if
+
+ you'd like the solution to any specific problem or further explanation!
