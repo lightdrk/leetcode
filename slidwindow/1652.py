@@ -1,26 +1,20 @@
 def decrypt(code: list[int], k: int) -> list[int]:
     length = len(code)
+    if k == 0:
+        return [0]*length
     output = [0]*length
-    sm_window = 0
-    if k > 0:
-        sm_window = 0
-        while k:
-            sm_window+=code[k%length]
-            k-=1
-        output[0] = sm_window
-        for i in range(1,length):
-            sm_window+= code[i%length] - code[(i-1)%length]
-            output[i] = sm_window
-    elif k < 0:
-        sm_window = 0
-        while k:
-            sm_window+=code[k%length]
-            k+=1
-        output[0] = sm_window
-        for i in range(1,length):
-            sm_window+= code[i%length] - code[(i-1)%length]
-            output[i] = sm_window
+    mv = 1
+    if k < 0:
+        mv = -1
+        k = -k
+    for i in range(length):
+        for j in range(1,k+1):
+            print(i+j+1)
+            output[i]+=code[(i+j*mv)%length]
     return output
 
 
 print(decrypt([5,7,1,4],3))
+print(decrypt([3,2,5,7,6], 3))
+
+print(decrypt([2,4,9,3], -2))
