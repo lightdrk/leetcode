@@ -1,20 +1,24 @@
+from collections import Counter
+
 def t(s,k):
-    length = len(s)
     count = 0
-    for i in range(length):
-        print(i)
-        c1 = 0
-        c0 = 0
-        for j in range(k*2+1):
-            if i+j >= length:
-                break
-            print(i+j)
-            if s[i+j] == '0':
-                c0+=1
+    c0 = 0
+    c1 = 0
+    left = 0
+    for i in range(len(s)):
+        print(count, f'index {i}', f'c0 {c0}', f'c1 {c1}')
+        if s[i] == '0':
+            c0+=1
+        else:
+            c1+=1
+        while c0>k and c1>k:
+            if s[left] == '0':
+                c0-=1
             else:
-                c1+=1
-            if c1 <= k and c0 <= k:
-                count+=1
+                c1-=1
+            left+=1
+        count+= i - left + 1
+
     return count
 
 print(t('10101', 1))
