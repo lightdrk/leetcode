@@ -1,29 +1,26 @@
-from collections import Counter 
+from collections import defaultdict 
 
 def countGood(nums: list[int], k):
-    def isGood(count):
-        g = 0
-        for n in count:
-            g+=((count[n]-1)*count[n]//2)
-            if g >= k:
-                return True
-        return False
-
     good = 0
-    count = {}
+    count = defaultdict(int)
+    p_count=0
     left = 0
     length = len(nums)
-    for i in range(length):
-        if not nums[i] in count:
-            count[nums[i]]=0
-        count[nums[i]]+=1
-        print(count)
-        while isGood(count):
-            print('True',count)
-            good+=1
-            left+=1
+    for right in range(length):
+        count[nums[right]]+=1
+        if count[nums[right]]>1:
+            p_count+=(count[nums[right]]-1)
+        print(f'p_count: {p_count}',f'good: {good}')
+        while p_count >= k and left < right:
+            good+=(length-right)
+            print(f'good += {length-right}', f'p_count>=k: {p_count>=k}')
+            if count[nums[left]] > 1:
+                p_count-=(count[nums[left]]-1)
+
             count[nums[left]]-=1
+            left+=1
     return good
 
-print(countGood([1,1,1,1,1],10))
-print(countGood([3,1,4,3,2,2,4],2))
+#print(countGood([1,1,1,1,1],10))
+print(countGood([1,1,3,1,2,1,2,2,1,2,1,2,3,3],14))
+
