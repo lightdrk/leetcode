@@ -1,17 +1,14 @@
-def minSizeSubarray(self, nums: List[int], target: int) -> int:
+def minSizeSubarray(nums: list[int], target: int) -> int:
     length = len(nums)
-    nums+=nums
-    length+=length
-    left = 0
-    right = 0
-    sm = 0
-    ans = float('inf')
-    while sm < target and right < length:
-        sm+=nums[right%length]
-        while sm > target:
-            sm-=nums[left%length]
-            left+=1
-        if sm == target:
-            ans = min(ans, right-left+1)
-        right+=1
-    return ans if ans != float('inf') else -1  
+    prefix = [0]*length
+    for i,n in enumerate(nums):
+        prefix[i] = n + prefix[i-1] 
+
+    while 
+
+
+print(minSizeSubarray([1,2,2,2,1,2,1,2,1,2,1], 83))
+print(minSizeSubarray([1,2,3],5))
+print(minSizeSubarray([1,1,1,2,3],4))
+print(minSizeSubarray([2,4,6,8],3))
+
