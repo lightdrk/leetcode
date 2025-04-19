@@ -1,0 +1,2 @@
+def countSubarrays(nums, k):
+
