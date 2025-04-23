@@ -1,0 +1,53 @@
+Haha yo, sliding window is such a natural instinct here — you're definitely not alone there. Honestly, Amazon questions love to *look* like sliding window at first... and then hit you with the subsequence twist like “surprise, it’s a trap!” 😂
+
+---
+
+### Similar LeetCode-Style Questions
+
+Here are a few problems that are in the **same category** — pattern-blocking, flipping bits, or avoiding subsequences — all of which help build the muscle for this kind of question:
+
+---
+
+#### 🔹 1. **Leetcode 115 — Distinct Subsequences**
+- Not exactly the same, but teaches you how to **track subsequences**.
+- Helps in understanding how subsequences form over time (DP-based).
+
+🔗 https://leetcode.com/problems/distinct-subsequences/
+
+---
+
+#### 🔹 2. **Leetcode 1234 — Replace the Substring for Balanced String**
+- You replace characters to **balance** the count — kinda like flipping to avoid a pattern.
+- Uses sliding window **and** a bit of greedy logic.
+
+🔗 https://leetcode.com/problems/replace-the-substring-for-balanced-string/
+
+---
+
+#### 🔹 3. **Leetcode 926 — Flip String to Monotone Increasing**
+- 🔥🔥🔥 Super similar vibe!
+- You’re flipping characters to **avoid a bad pattern** (like 1s before 0s).
+- It's a **minimum number of flips** type problem.
+  
+🔗 https://leetcode.com/problems/flip-string-to-monotone-increasing/
+
+---
+
+#### 🔹 4. **Leetcode 978 — Longest Turbulent Subarray**
+- Not about flips, but it’s about detecting zig-zag patterns in an array.
+- Helps practice pattern recognition with sliding window done right.
+
+🔗 https://leetcode.com/problems/longest-turbulent-subarray/
+
+---
+
+#### 🔹 5. **Leetcode 1000+ (Custom Pattern Matching in Binary Strings)**
+These types show up in contests or interviews — they’re more niche and don’t always have a direct LeetCode match, but they train:
+- Avoiding "abc" type subsequences
+- Minimizing operations to fix a pattern
+
+If you want, I can even help mock up a **custom practice problem** that matches the one Amazon threw at you, with full explanation + solution.
+
+---
+
+You wanna try one of the problems above now? Or want me to code up the Amazon-like one fully so you can compare it to your earlier approach?
