@@ -1,0 +1,74 @@
+Problem Statement
+
+Consider a city with toll plazas represented as nodes in an undirected and unrooted tree with n nodes, indexed from 0 to n-1. The connections between toll plazas are described by the 2D integer array path, where path[i] = [a, b] indicates that there is an edge between nodes a and b in the tree.
+
+Each toll plaza has an associated tax, and you are given an integer array tax, where tax[i] represents the tax required to cross the ith node.
+
+The total tax of any path is defined as the sum of the taxes of all nodes on that path.
+
+Now, you are provided with a 2D integer array journey, where journey[i] = [start, end] indicates the ith journey, starting from node 'start' and traveling to the node 'end' using any valid path.
+
+
+
+Before performing your first journey, you can choose some non-adjacent (Toll Plazas) nodes and halve the taxes.
+
+The objective is to find the minimum total tax sum to perform all the given journeys.
+
+Input Format
+
+The First line of input contains an integer n. 
+The Second line of input contains an integer x, which is the length of paths.
+The Third line of input contains an integer 2.
+The next x lines contain 2 integer inputs in each line.
+The following line contains an integer, which is the size of the tax array (assume y).
+The next y lines of input contain an integer.
+The following line contains an integer, which is the size of the tax array (assume z).
+The following line contains an integer 2.
+The next z lines of input contain 2 integers in each line.
+Constraints
+
+1 <= n <= 50
+paths.length == n - 1
+0 <= ai, bi <= n - 1
+paths represent a valid tree.
+tax.length == n
+tax[i] is an even integer.
+1 <= tax[i] <= 1000
+1 <= journeys.length <= 100
+0 <= starti, endi <= n - 1
+Output Format
+
+It will be an integer, which is the minimum total tax sum to perform all the given journeys.
+Sample test case
+
+Input
+
+4
+3
+2
+0 1
+1 2
+1 3
+4
+2
+2
+10
+6
+3
+2
+0 3
+2 1
+2 3
+Output
+
+23
+Explanation
+
+As given n = 4, paths = [[0,1],[1,2],[1,3]], tax = [2,2,10,6], journeys = [[0,3],[2,1],[2,3]]
+
+for 1st journey {0,3} (from 0 to 3), there is a path (0->1->3). The tax sum of that path is tax[0] + tax[1] + tax[3] =1 + 2 + 3 = 6. (here, we halve the tax for nodes (toll Plazas) 0, 3).
+for the 2nd journey {2,1} (from 2 to 1), there is a path (2->1). The tax sum of that path is tax[2] + tax[1] =5+ 2 = 7. (here, we halve the tax for node (toll Plaza) 2).
+for the 3rd journey {2,3} (from 2 to 3), there is a path (2->1->3). The tax sum of that path is tax[2] + tax[1] + tax[3] =5 + 2 + 3 = 10. (here, we halve the tax for nodes (toll Plazas) 2, 3).
+The total tax for all journeys is (6 + 7 + 10) = 23. (It is the minimum total tax sum to perform all the given journeys.)
+
+
