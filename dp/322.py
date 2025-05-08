@@ -1,16 +1,23 @@
 def coinChange(coins: list[int], amount: int) -> int:
     length = len(coins)
-    def recur(val, step):
+    memo = {}
+    def recur(val):
         if val == amount:
-            return step
+            return 0
+        if val in memo:
+            return memo[val]
         ans = float('inf')
+
         for n in coins:
             if val+n > amount:
                 continue
-            ans = min(ans, recur(val+n,step+1))
-
-        return ans if ans != float('inf') else -1
-    return recur(0,0)
+            ans = min(ans, 1+recur(val+n))
+        memo[val] = ans
+        return ans
+    
+    output = recur(0)
+    print(memo)
+    return output if output != float('inf') else -1
 
 print(coinChange([1,2,5], 11))
 print(coinChange([1,2,5], 100))
