@@ -27,20 +27,15 @@ def wb(s, wordDict):
     def recur(start):
         if start >= ln:
             return False
-        if s[0:start] in wordDict and s[start:] in wordDict:
+
+        if s[start:] in wordDict:
             return True
-        for i in range(ln):
-            if recur(i):
-                return True
-
-
+        for i in range(start,ln):
+            if s[start:i] in wordDict:
+                if recur(i):
+                    return True
         return False
-
-    for 
-
-
-
-
+    return recur(0)
 
 
 print(wb('leetcode', ["leet", "code"]))
