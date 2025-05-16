@@ -27,3 +27,21 @@ def longestCS(text1, text2):
 
 print(longestCS("abcde", "ace"))
 
+def longestCs(text1, text2):
+    length1 = len(text1)
+    length2 = len(text2)
+    def recur(i,j):
+        if i>=length1 or j >= length2:
+            return 0
+        
+        if text1[i] == text2[j]:
+            return 1 + recur(i+1,j+1)
+        else:
+            return max(recur(i+1,j), recur(i,j+1))
+
+    return recur(0,0)
+
+print(longestCs("abcde", "ace"))
+
+
+
