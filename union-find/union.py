@@ -10,6 +10,14 @@ class UnionFind:
         if x >= self.length:
             return -1
         if self.parent[x] != x:
+            #find function helps go to source for example
+            '''
+                if in graph or something we have [2,4]
+                and before it is [0,2]
+                that meaning for 2 source is 0 and for 4 source is also 0
+                and hence we have to move till we dont find source meaning 
+                tha value to find is already equal to found.
+            '''
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
 

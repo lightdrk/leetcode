@@ -1,3 +1,5 @@
+from collections import deque
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -57,6 +59,80 @@ def printing(root):
         root = stack.pop()
         print(root.val,'->',end=' ')
         root = root.right
+    return
+
+def _inorder(root):
+    if not root:
+        return
+
+    _inorder(root.left)
+    print(root.val,end="->")
+    _inorder(root.right)
+
+def postorder(root):
+    if not root:
+        return
+    stack = []
+
+    while stack or root:
+        while root:
+            stack.append(root)
+            root = root.left
+
+        root = stack.pop()
+        print(root.val, end='->')
+        root = root.right
+    return
+
+def _postorder(root):
+    if not root:
+        return
+    _postorder(root.left)
+    _postorder(root.right)
+    print(root.val)
+
+
+def level(root):
+    que = deque([root])
+    output = []
+    while que:
+        length = len(que)
+        out = []
+        while length:
+            root = que.popleft()
+            out.append(root.val)
+            if root.left:
+                que.append(root.left)
+            if root.right:
+                que.append(root.right)
+            length-=1
+        output.append(out)
+
+    for a in output:
+        print(a)
+
+def preorder(root):
+    que = deque()
+    while que or root:
+        while root:
+            print(root.val, end='->')
+            que.append(root)
+            root = root.left
+        root = que.pop()
+        root = root.right
+
+
+def preorder_v2(root):
+    if not root:
+        return
+    stack = [root]
+    while stack:
+        node = stack.pop()
+        print(node.val, end='->')
+        if node.right:
+            stack.append(node.right)
+        if node.left:
+            stack.append(node.left)
 
 
 print("****************printing using recursion **************")
@@ -64,9 +140,34 @@ root = None
 for n in [5,3,6,7,1,9]:
     root = binTree(root, n)
 printing(root)
-
+print()
 print("**************printing using iteration*****************")
 root = None
-for n in [5,3,6,7,1,9]:
+for n in [10,5,3,6,7,1,9,12,13,15,4]:
     root = binary(root,n)
 printingI(root)
+print()
+print('************* recursion *******************')
+_inorder(root)
+print()
+
+print('************* postorder *******************')
+postorder(root)
+print()
+
+print('************* Recursion postorder *******************')
+postorder(root)
+print()
+
+print('************* Recursion level order *******************')
+level(root)
+print()
+
+
+print('************* Recursion preorder *******************')
+preorder(root)
+print()
+
+print('************* Recursion preorder *******************')
+preorder_v2(root)
+print()
