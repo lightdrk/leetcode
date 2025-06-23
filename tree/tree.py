@@ -171,3 +171,58 @@ print()
 print('************* Recursion preorder *******************')
 preorder_v2(root)
 print()
+
+def delete(root,val):
+    #BST
+
+    def dell(root):
+        if not root.left and not root.right:
+            return
+        if not root.left and root.right:
+            return root.right
+        if not root.right and root.left:
+            return root.left
+        if root.left and root.right:
+            node = root
+            prev = None
+            while node:
+                if not node.left and not node.left.left:
+                    prev = node
+                node = node.left
+            root.val = node.val
+            node.left = None
+
+    if not root:
+        return 
+    # if node is leaf just remove
+    # if node has one child replace it with him
+    # if node has two child find successecor inorder or predecessor
+
+    if root.val == val:
+        dell(root)
+        return
+
+    while root:
+        if root.val > val:
+            if root.left.val == val:
+                r = dell(root.left)
+                if r:
+                    root.left = r
+                return
+            root = root.left
+
+        else:
+            if root.right.val == val:
+                r = dell(root.right)
+                if r:
+                    root.right = r
+                return
+            root = root.right
+    return
+
+
+delete(root,10)
+
+print('************* recursion *******************')
+_inorder(root)
+print()
