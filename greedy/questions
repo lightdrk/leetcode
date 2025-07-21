@@ -1,0 +1,78 @@
+Great question — you're right to double-check! Let’s break it down clearly:
+
+---
+
+## ✅ **Beginner-Friendly Greedy Problems (Truly for Starters):**
+
+These are **absolutely beginner** level. You should start here if you're new to greedy algorithms:
+
+1. **Coin Change (Greedy)** – \[Standard coin denominations]
+
+   > Very basic, direct greedy strategy.
+   > ✅ Beginner
+
+2. **Activity Selection Problem**
+
+   > Classic greedy: Sort by end time, pick next non-overlapping.
+   > ✅ Beginner
+
+3. **Assign Cookies**
+
+   > Simple greedy based on sorting.
+   > ✅ Beginner
+
+4. **Reduce Array to 0 by Subtracting Distinct Elements**
+
+   > Just find the number of unique positive elements.
+   > ✅ Beginner (though it sounds tricky)
+
+---
+
+## 🟡 **Low-Intermediate Greedy Problems:**
+
+These are a bit more involved but still approachable for motivated beginners:
+
+5. **Fractional Knapsack**
+
+   > Sort by value/weight ratio. A classic greedy problem.
+   > 🟡 Low-intermediate (requires understanding sorting + partial choices)
+
+6. **Minimum Number of Platforms**
+
+   > Conceptually easy but needs careful handling of sorting.
+   > 🟡 Low-intermediate
+
+7. **Jump Game (Min Jumps)**
+
+   > Can be solved greedily, but logic needs attention.
+   > 🟡 Low-intermediate
+
+---
+
+## 🔸 **Intermediate Greedy Problems:**
+
+These require a bit more experience with arrays, sorting, and edge cases:
+
+8. **Job Sequencing Problem**
+
+   > Needs sorting and a time-slot booking approach.
+   > 🔸 Intermediate
+
+9. **Gas Station (Circular Route)**
+
+   > Needs full traversal logic and careful prefix sum handling.
+   > 🔸 Intermediate
+
+10. **Custom Coin Change (like \[1, 3, 4])**
+
+> Great **greedy vs dynamic programming** contrast.
+> 🔸 Intermediate (teaches greedy limits)
+
+---
+
+## 👉 Recommendation:
+
+If you are just starting out, do the first **3–4 problems** from the ✅ beginner section. Once you're comfortable, move to the 🟡 ones.
+
+Want me to reorder and label a list with just **true beginner greedy problems** to get started with?
+
