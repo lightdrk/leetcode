@@ -1,0 +1,151 @@
+Ah — got it! You're not a total beginner — you're a **"fresher, but experienced in DSA"** — someone who’s done most core topics already and is now **refining, optimizing, and deepening** for interviews like **Google**.
+
+Perfect. That means you're in the **“refinement and mastery” phase**, not discovery.
+
+Let’s shift focus accordingly.
+
+---
+
+## 🔥 DSA Mastery Roadmap (Fresher but Already Covered Core)
+
+### 🎯 Goal: Deepen understanding, eliminate weak spots, practice Google-style problems, and build pattern fluency.
+
+---
+
+### ✅ Phase 1: Tighten Core Fundamentals (1 week max)
+
+You're not relearning — you're solidifying. For each topic below, **implement + solve 2–3 handpicked advanced questions**.
+
+| Topic            | Focus Now                                                    |
+| ---------------- | ------------------------------------------------------------ |
+| Arrays & Strings | Do problems with constraints (O(1) space, in-place mod)      |
+| Hashing          | Optimize collision-prone cases; revisit hashmap tricks       |
+| Stack & Queue    | Monotonic stacks, infix → postfix conversion                 |
+| Linked Lists     | Complex ones like LFU Cache, intersection, K-group reverse   |
+| Sliding Window   | Variable size, dynamic windows, max in window                |
+| Two Pointers     | Tricky variants (3Sum Closest, Merge Sorted Arrays in-place) |
+
+---
+
+### ✅ Phase 2: Intermediate → Advanced Focus Areas
+
+You've probably **done** these topics — now focus on:
+
+* **Edge case handling**
+* **Custom modifications**
+* **Variants that combine multiple topics**
+
+#### 🔁 Sorting & Searching
+
+* **Binary Search on Answer**
+
+  * Min days to make bouquets
+  * Koko eating bananas
+* **QuickSelect**
+
+  * Kth smallest in unsorted array
+* Bucket sort / radix in practice
+
+#### 🌲 Trees
+
+* **Binary Tree:**
+
+  * Serialize/deserialize
+  * Build from preorder + inorder
+  * Views: left/right/top
+* **BST:**
+
+  * Recover BST
+  * In-order successor without recursion
+
+#### 📊 Heaps & Priority Queues
+
+* Top K frequent elements
+* Median from data stream
+* Merge K sorted lists
+
+#### 📚 Tries
+
+* Prefix matching
+* Word suggestions (Google-style)
+* Bitwise trie for max XOR pair
+
+#### 🔄 Graphs
+
+* BFS & DFS with visited set edge cases
+* Union Find with path compression
+* Topo sort: DFS & Kahn’s
+* Dijkstra’s (heap), Bellman-Ford (neg edges)
+* Detect cycle in directed graph
+* Problems like:
+
+  * Course Schedule
+  * Number of islands (BFS/DFS/Union Find)
+
+---
+
+### ✅ Phase 3: Dynamic Programming Mastery
+
+Forget "just doing DP" — aim to **recognize patterns instantly**.
+
+| DP Pattern  | Key Problems                                                   |
+| ----------- | -------------------------------------------------------------- |
+| 1D DP       | Climb stairs, House robber, Jump game                          |
+| 2D DP       | LCS, Edit Distance, Unique paths                               |
+| Knapsack    | 0/1, unbounded, partition subset                               |
+| Substrings  | Longest Palindromic Substring, Substring with K distinct chars |
+| DP on Trees | Max path sum, camera on binary tree                            |
+| Bitmask DP  | Count subsets, Traveling Salesman Problem (optional)           |
+
+👉 **Practice writing both memoized + tabulated versions.**
+
+---
+
+### ✅ Phase 4: Google-Level + System Design Lite
+
+These aren’t just about solving — they test **real-world thinking**.
+
+| Area           | Problems                                               |
+| -------------- | ------------------------------------------------------ |
+| Greedy         | Jump Game II, Gas Station, Reorganize String           |
+| Backtracking   | N-Queens, Sudoku Solver, Word Search                   |
+| Tricky Design  | LRU/LFU Cache, File System class, Hit Counter          |
+| Streaming      | Moving average from stream, sliding window median      |
+| Graph + DP Mix | Word Ladder II, Alien Dictionary, Shortest path in DAG |
+
+---
+
+### 🎯 Phase 5: Interview Simulation & Practice
+
+You've done the study. Now it's about performance.
+
+* ✅ **LeetCode Contest archives** → for timed practice
+* ✅ **Pramp / Interviewing.io** → mock interviews
+* ✅ **NeetCode 150 / Blind 75** → redo *only tricky* ones
+* ✅ **Behavioral Qs** — don’t skip them
+
+---
+
+## 🔁 Practice Strategy as a “Re-doer”
+
+| Rule            | Tip                                                       |
+| --------------- | --------------------------------------------------------- |
+| Redo Smart      | Redo only those problems you couldn’t solve in < 30 min   |
+| Add Constraints | Add "O(1) space" or "in-place" challenge to old problems  |
+| Mix Topics      | Do problems where Tree + DP or Graph + Union Find combine |
+| Time Yourself   | Aim to solve medium in 15–20 min, hard in 40–45           |
+| Track Patterns  | Maintain a list of patterns that repeat across problems   |
+
+---
+
+## 🚀 Want Help With?
+
+I can generate for you:
+
+* 📅 A **21-day “refresher” schedule** (advanced-only)
+* 📚 A **Notion/Excel tracker** of handpicked problems
+* 🎯 A **daily drill generator** (5 problems/day by topic & level)
+* 🧪 A **mock Google interview sheet** (DSA + system design lite)
+
+Just tell me how you'd like to continue — and I’ll build it for you. You're at the perfect level to **turn polish into mastery**. Let’s go. 💪
+
