@@ -19,25 +19,27 @@ def func(arr: list[int]):
     for i in range(l):
         sm = 0
         for j in range(i,l):
-            if sm == 0:
-                count = max(count, j-i)
             sm+=arr[j]
-
+            if sm == 0:
+                count = max(count, j-i +1)
     return count
 
 def func2(arr: list[int]) ->int:
-    l = len(arr)
-    prefix = []
     sm = 0
-    for a in arr:
+    count = 0
+    seen = {}
+    for i,a in enumerate(arr):
         sm+=a
-        prefix.append(sm)
-    print(prefix)
-    return 0
+        if sm == 0:
+            count = i+1
+        if sm in seen:
+            count = max(count, i-seen[sm])
+        else:
+            seen[sm] = i
+    return count
 
 test_case = [[1, 2, -3, 3, -1, -2, 4],[0,0,0,0,0,0,0,0], [1,-1,-1,1], [1], [1,2,3]]
 
 for t in test_case:
     print(func(t))
-
-func2(test_case[0])
+    print(func2(t))
