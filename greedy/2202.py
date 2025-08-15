@@ -22,21 +22,12 @@ in complete do it later
         '''
 def func(arr,k):
     l = len(arr)
-    if l <= k:
+    if l == 0 or (l==1 and k&1==1):
         return -1
-    if k == 1:
-        return arr[1]
-    pm = float('-inf')
-    for i in range(k-2):
-        pm = max(pm,arr[i])
-    p2 = arr[k-2]
-    p3 = 0
-    if k+1 < l:
-        p3 = arr[k]
-    else: 
-        p3 = float('-inf')
-    return max(p2,p3,pm)
-
-
+    if k >= 1:
+        return arr[k]
+    if k > l:
+        return max(arr)
+    return max(max(arr[:k-2])if k-2>0 else float('-inf'), arr[k-2], arr[k] if k<l else float('-inf')) 
 for arr,k in test_cases:
     print(func(arr,k))
