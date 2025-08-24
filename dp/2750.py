@@ -8,4 +8,8 @@ Return an integer denoting the number of ways to split the array nums into good 
 A subarray is a contiguous non-empty sequence of elements within an array.
 
     '''
+'''
+spliting a subarray esentially be done using zero , zero between two 1s 
 
+
+'''
