@@ -1,0 +1,126 @@
+⚡ Your Time-Limited Roadmap (for Google fresher)
+Tier 1: Must Redo (bread and butter)
+
+👉 You already solved these, now redo for speed + narration
+
+Three Sum
+
+Subarray Sum Equals K
+
+Longest Substring Without Repeating Characters
+
+Minimum Window Substring
+
+Merge Intervals
+
+Non-overlapping Intervals
+
+Jump Game
+
+Jump Game II
+
+Search in Rotated Sorted Array
+
+Find First and Last Position of Element in Sorted Array
+
+Binary Tree Maximum Path Sum
+
+Lowest Common Ancestor of a Binary Tree
+
+Binary Tree Level Order Traversal
+
+Serialize and Deserialize Binary Tree
+
+Course Schedule
+
+Course Schedule II
+
+Number of Islands
+
+Word Ladder
+
+Coin Change
+
+Longest Increasing Subsequence
+
+Edit Distance
+
+Partition Equal Subset Sum
+
+Daily Temperatures
+
+Evaluate Reverse Polish Notation
+
+Valid Parentheses
+
+Generate Parentheses
+
+Trapping Rain Water
+
+Container With Most Water
+
+Set Matrix Zeroes
+
+Spiral Matrix
+
+Rotate Image
+
+Word Search
+
+Kth Largest Element in an Array
+
+Top K Frequent Elements
+
+Find Median from Data Stream
+
+Meeting Rooms II
+
+Minimum Meeting Rooms
+
+Sliding Window Maximum
+
+Find Minimum in Rotated Sorted Array
+
+Maximum Subarray
+
+Climbing Stairs
+
+Unique Paths
+
+Minimum Path Sum
+
+Maximum Product Subarray
+
+Gas Station
+
+---
+
+✅ Final count = **46 must-do problems** (all merged, no duplicates).
+
+Do you want me to also **mark the “core 20–25 most important ones”** from these, the absolute minimum you must master before interviews?
+
+Tier 2: Additions (Google must-knows you’re missing)
+
+Trapping Rain Water (42)
+
+Largest Rectangle in Histogram (84)
+
+Sliding Window Maximum (239)
+
+Kth Largest Element in an Array (215)
+
+Find Median from Data Stream (295)
+
+LFU or LRU Cache (choose one; LRU more common)
+
+Shortest Path in Binary Matrix (1091) (grid BFS practice)
+
+Swim in Rising Water (778) (Dijkstra pattern)
+
+Tier 3: Only if time permits (bonus points, not essential)
+
+Split Array Largest Sum (binary search on answer)
+
+Stone Game (basic DP)
+
+Reorganize String (string + heap)
