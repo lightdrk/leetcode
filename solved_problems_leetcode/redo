@@ -27,7 +27,7 @@ Binary Tree Maximum Path Sum
 
 Lowest Common Ancestor of a Binary Tree
 
-Binary Tree Level Order Traversal
+Binary Tree Level Order Traversal (done)
 
 Serialize and Deserialize Binary Tree
 
@@ -73,9 +73,40 @@ Top K Frequent Elements
 
 Find Median from Data Stream
 
-Meeting Rooms II
+Meeting Rooms II (done )
+{
 
-Minimum Meeting Rooms
+need practice
+
+Sort + Heap (Meeting Rooms II, Merge Intervals).
+
+Sort + Two Pointers (Interval Scheduling, Non-overlapping Intervals).
+
+Sweep Line (Count overlaps, Skyline problem).
+Easy:
+
+455. Assign Cookies
+
+122. Best Time to Buy and Sell Stock II
+
+Medium:
+
+435. Non-overlapping Intervals
+
+253. Meeting Rooms II (you just did this!)
+
+1029. Two City Scheduling
+
+Hard:
+
+759. Employee Free Time
+
+857. Minimum Cost to Hire K Worker
+
+}
+
+
+Minimum Meeting Rooms (done)
 
 Sliding Window Maximum
 
