@@ -23,8 +23,33 @@ def swaps_required(array):
     print(swaps)
 
 
-case = [[2,3,1], [4,1,2,3], [1,5,4,3,2], [10,11,5,6], [7,8,9]]
+case = [[2,3,1], [4,1,2,3], [1,5,4,3,2], [10,11,5,6], [7,8,9], [7, 6, 8, 5]]
 
 for a in case:
     swaps_required(a)
 
+
+def func(array):
+    sorted_map = {val: i for i, val in enumerate(sorted(array))}
+    swaps = 0
+    visited = [False]*len(array)
+    for i,val in enumerate(array):
+        if visited[i] or i == sorted_map[val]:
+            continue
+        stack = [(i,val)]
+        sw = 0
+        while stack:
+            idx, v = stack.pop()
+            if visited[idx]:
+                continue
+            visited[idx] = True
+            sw+=1
+            stack.append((sorted_map[v],v))
+
+        if sw > 1:
+            swaps+=(sw-1)
+
+    return swaps
+print("**************************************")
+for a in case:
+    print(func(a))
