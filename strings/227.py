@@ -46,3 +46,68 @@ def func(s):
 
 for s in edge_Case:
     print(func(s))
+
+
+'''
+
+if follow up question i fwe had paranthesses? then ?
+
+we do it with recursion but problem becomes sign
+'''
+
+
+
+edge_Case = ['1+(2+3)*2*3/3', '-(12/2)', '2-(-1)','2+-1','2*-1', '2*++-1', '-2', '-2*-1','( -1 + 3)',"(2*/3)"]
+
+def funcP(s):
+    def resolve(i):
+        nums = []
+        neg = False
+        multiply = False
+        division = False
+        while i < len(s):
+            if s[i].isdigit():
+                number  = 0
+                while i < len(s) and s[i].isdigit():
+                    number = number*10+int(s[i])
+                    i+=1
+                if neg:
+                    number = -number
+                    neg = False
+                if multiply and nums:
+                    number*=nums.pop()
+                    multiply = False
+                if division and nums:
+                    number = int(nums.pop()/number)
+                    division = False
+                nums.append(number)
+            else:
+                if s[i] == '-':
+                    neg = True
+                elif s[i] == '*':
+                    multiply = True
+                elif s[i] == '/':
+                    division = True
+                elif s[i] == '(':
+                    number, idx = resolve(i+1)
+                    if neg:
+                        number = -number
+                        neg = False
+                    if multiply and nums:
+                        number*=nums.pop()
+                        multiply = False
+                    if division and nums:
+                        number = int(nums.pop()/number)
+                        division = False
+                    nums.append(number)
+                    i = idx
+                elif s[i] == ')':
+                    return sum(nums), i
+                i+=1
+        return sum(nums), i
+    return resolve(0)
+
+for s in edge_Case:
+    print(funcP(s))
+
+
