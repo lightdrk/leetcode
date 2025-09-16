@@ -1,0 +1,107 @@
+Absolutely! To **excel** at Google interviews (and other top-tier tech companies), you need to *master* these core algorithmic patterns **and** understand how to apply, combine, and communicate them effectively. Here’s a comprehensive, curated list of patterns you **must know** — including some that give you an extra edge — with concise explanations and tips on why they matter.
+
+---
+
+# 🚀 Core Patterns to Master for Google Interviews (And Beyond)
+
+### 1. **Sliding Window**
+
+**Key:** Manage a dynamic range efficiently (fixed or variable size) for problems on substrings/subarrays.
+**Why:** Often used for strings and arrays; fast O(n) solutions instead of brute force.
+
+### 2. **Two Pointers**
+
+**Key:** Use two indices moving through data, often sorted, to find pairs or process sequences in linear time.
+**Why:** Great for sorted data, arrays, and string manipulation problems.
+
+### 3. **Prefix Sum / Cumulative Sum**
+
+**Key:** Precompute sums to answer range queries in O(1).
+**Why:** Speeds up repeated sum or frequency computations.
+
+### 4. **Binary Search**
+
+**Key:** Efficiently search in sorted arrays or answer spaces by halving search range.
+**Why:** Essential for optimized search problems and tricky “search in answer space” questions.
+
+### 5. **Greedy Algorithms**
+
+**Key:** Make local optimal choices to build global solution.
+**Why:** Simplicity and efficiency; sometimes tricky to prove correctness.
+
+### 6. **Dynamic Programming (DP)**
+
+**Key:** Break problems into subproblems with overlapping solutions; use memoization or tabulation.
+**Why:** Critical for optimization and combinatorial problems.
+
+### 7. **Min/Max Tracking**
+
+**Key:** Track minimum or maximum element seen so far to compute differences or maintain constraints.
+**Why:** Core to problems like stock trading, max difference, and real-time stats.
+
+### 8. **Monotonic Stack/Queue**
+
+**Key:** Maintain increasing or decreasing sequences for range or next greater element queries.
+**Why:** Efficient for histogram, sliding window max, and related problems.
+
+### 9. **Heap / Priority Queue**
+
+**Key:** Maintain top-K elements dynamically or get min/max efficiently.
+**Why:** Useful for merging, scheduling, or any dynamic ordering problem.
+
+### 10. **Union Find (Disjoint Set Union - DSU)**
+
+**Key:** Quickly track and merge connected components.
+**Why:** Vital for connectivity, cycle detection, and clustering problems.
+
+### 11. **Topological Sort**
+
+**Key:** Order nodes respecting dependencies in DAGs.
+**Why:** Key in scheduling, build systems, and prerequisite resolution.
+
+### 12. **Backtracking**
+
+**Key:** Explore all options systematically, pruning invalid branches.
+**Why:** Essential for combinatorial, permutation, and constraint satisfaction problems.
+
+### 13. **Divide and Conquer**
+
+**Key:** Recursively split problems into smaller independent parts and combine results.
+**Why:** Foundational for efficient sorting, searching, and many recursive algorithms.
+
+### 14. **Reservoir Sampling**
+
+**Key:** Uniformly sample k elements from unknown or streaming data with O(k) space.
+**Why:** Powerful for big data and streaming scenarios.
+
+### 15. **Floyd’s Cycle Detection (Tortoise and Hare)**
+
+**Key:** Detect cycles in linked lists or sequences with two pointers moving at different speeds.
+**Why:** Elegant solution to cycle problems without extra space.
+
+### 16. **Kadane’s Algorithm**
+
+**Key:** Find max sum subarray by tracking running sums and resetting when negative.
+**Why:** Classic for max subarray problems; O(n) solution.
+
+### 17. **Meet in the Middle**
+
+**Key:** Split problem, solve halves independently, combine results to reduce exponential complexity.
+**Why:** Useful for hard subset-sum, combination, and exponential problems.
+
+### 18. **Bit Manipulation**
+
+**Key:** Use bitwise operations to solve set, toggling, and counting problems efficiently.
+**Why:** Critical for optimization and certain mathematical problems.
+
+### 19. **Graph Traversals (DFS & BFS)**
+
+**Key:** Explore nodes and edges to solve pathfinding, connectivity, and shortest path.
+**Why:** Core to graph problems, often combined with other patterns.
+
+### 20. **Sliding Window Maximum (Deque or Heap)**
+
+**Key:** Efficiently find max/min in a sliding window.
+**Why:** Combines sliding window and data structure skills.
+
+

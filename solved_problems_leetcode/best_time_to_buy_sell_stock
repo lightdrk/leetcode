@@ -1,0 +1,38 @@
+so i found , the use of this problem 
+
+what the hell
+
+basic logic of the problem is we can convert this problem to , we need max and min while traveling, to get max diff,
+
+WHAT I DID 
+
+approach one
+2 for loop 
+
+second approach
+
+then used heap store the max  , then re iterate over it , to get min between new values 
+this was n^2 still beacuse we have to check for all
+
+third approach 
+move back to single loop , compute the min on the file , 
+
+
+fourth appraoch 
+we store the min with index , so we dont need to re compute till we reach that min index ,if reached 
+then move to new compute min 
+
+fivth approach 
+
+this problems approahc
+
+we start from the end , we have to get max diff, and subtraction logic is that we sub from left - right
+
+so we start from the end of the array , as last value is the min , beacause thier is nothing after that 
+then we move up updating the min_right , by doing if prev min_right vs prev max which one is min , this works
+beacuse we have either two choices 
+
+'1234567'
+here we start form bottom 7  is min 
+we sub from 6 - 7 sotre the answer , then we update min_right if 6,7 current max vs min...
+
