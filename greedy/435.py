@@ -3,6 +3,9 @@ non-overlapping intervals
 
 
 '''
+'''
+
+#    first attempt
 
 def over(intervals):
     l = len(intervals)
@@ -17,6 +20,15 @@ def over(intervals):
                 output+=1
         return output+dp(idx+1)
     return dp(0)
+'''
+
+def over(intervals):
+    l = len(intervals)
+    def dp(i):
+
+        #if over lap -> 1+dp(i+1,)
+        #remove at ever overlap dp(i+1,)
+
 edge = [[[[1,2],[2,3],[3,4],[1,3]]]]
 
 print(over(edge[0]))
