@@ -1,0 +1,124 @@
+Great! Let’s build your **Binary Search Mastery** pipeline.
+Below are **condition-based binary search practice problems**, increasing in difficulty.
+Tell me when you want **hints, solutions, or more problems**.
+
+---
+
+# 🔍 **Binary Search — Condition-Based Practice Problems**
+
+These problems require identifying a *monotonic condition* and using binary search over the **answer space**, not indices.
+
+---
+
+## **LEVEL 1 — Warm-up (Straightforward Conditions)**
+
+### **1. Square Root Ceiling**
+
+Given an integer `n`, find the smallest integer `x` such that
+`x*x >= n`.
+
+---
+
+### **2. First Bad Version**
+
+You have a function `isBad(v)` that becomes true at some version and stays true afterwards.
+Find the first bad version.
+
+---
+
+### **3. Min Speed to Arrive on Time**
+
+Given an array of distances `dist[i]` and a time limit `H`, find the minimum integer speed `s` such that
+`sum(ceil(dist[i] / s)) <= H`.
+
+---
+
+## **LEVEL 2 — Mid Difficulty**
+
+### **4. Koko Eating Bananas**
+
+Given piles of bananas and hours `H`, find the minimum eating speed so Koko finishes in time.
+
+---
+
+### **5. Allocate Minimum Pages**
+
+Given `books[i]` as pages in each book and `k` students, split the array into `k` contiguous groups so the maximum pages assigned to any student is minimized.
+
+Binary search on `maxPages`.
+
+---
+
+### **6. Ship Packages Within D Days**
+
+Find the minimum ship capacity to deliver all packages within `D` days.
+
+---
+
+## **LEVEL 3 — Harder Conditions**
+
+### **7. Minimize Maximum Difference of Pairs**
+
+Given array `nums` and integer `p`, you must form `p` pairs minimizing the **maximum difference in each chosen pair**.
+Binary search on `maxDiff`.
+
+---
+
+### **8. Split Array – Largest Sum**
+
+Split array into `k` parts minimizing the **largest sum among parts**.
+
+---
+
+### **9. Find Smallest Value so That at Least k Pairs Have Difference ≤ x**
+
+Given sorted `nums`, count pairs with `|nums[i] – nums[j]| ≤ x`.
+Binary search on `x`.
+
+---
+
+## **LEVEL 4 — Very Hard**
+
+### **10. Minimum Time to Finish Trips**
+
+Given `time[i]` = time each bus takes for 1 trip.
+If a bus can do infinite trips, find the minimum time so that total trips ≥ `T`.
+
+Binary search on **time**.
+
+---
+
+### **11. Maximum Median with K Increments**
+
+Find the maximum possible median if you can increment any elements up to `k` total.
+
+Binary search on **median value**.
+
+---
+
+### **12. Peak Finder in 2D Grid (Binary Search on Rows with Condition)**
+
+Given a grid, find a “peak”.
+Binary search on mid-row, check max in that row, compare with neighbors.
+
+---
+
+# ✅ Want to Practice Interactively?
+
+Tell me one of these:
+
+* **“Give me an easy problem to solve.”**
+* **“Give me a medium one.”**
+* **“Give me a hard one.”**
+* **“Drill me with mixed random problems.”**
+
+Or say: **“Start from Level X.”**
+
+I can also give:
+✔ step-by-step hints
+✔ expected binary-search condition
+✔ answer-space setup
+✔ brute-force vs optimal comparison
+
+What do you want next?
+
