@@ -25,4 +25,31 @@ Interesting. Okay, so so essentially what we are doing here is this at every poi
 
     '''
 
-def stoneGame():
+def stoneGame(piles):
+    l = len(piles)
+    ans = 0
+    i=0
+    j=l-1
+    for _ in range(l):
+        for _ in range(l):
+            if i == j:
+                break
+            if (i+j)&1 == 1:
+                if piles[i] > piles[j]:
+                    ans+=piles[i]
+                    i+=1
+                elif piles[i] <= piles[j]:
+                    ans+=piles[j]
+                    j-=1
+            else:
+                if piles[i] > piles[j]:
+                    i+=1
+                elif piles[i] <= piles[j]:
+                    j-=1
+
+    print(ans)
+
+test = [[1,3,4,5,3,2], [1,2,4,4,1],[5,3,4,5]]
+
+for t in test:
+    stoneGame(t)
