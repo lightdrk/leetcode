@@ -20,3 +20,16 @@ def trap(height):
 
 for t in test:
     trap(t)
+
+# not correct answer above.
+
+def trap(height):
+    index = 0
+    l = len(height)
+    while index < l and height[index] > 0:
+        index+=1
+    while index < l:
+        start = index
+        val = height[index]
+        while index < l and val >= height[index]: 
+
