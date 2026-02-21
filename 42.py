@@ -4,15 +4,15 @@ def trap(height):
     left = right = 0
     l = len(height)
     water = 0
-    while left < l:
+    while left <= l-1:
+        print(f'height[left] {height[left]}')
         ans = 0
         right = left+1
         while right < l and height[right] <= height[left]:
             ans+=(height[left]-height[right])
             print(f'height[left]{height[left]}- height[right] {height[right]}',ans)
             right+=1
-        if height[right] > height[left]:
-            water+=ans
+        water+=ans
         left = right
     print(water)
     return water
