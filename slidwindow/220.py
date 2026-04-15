@@ -41,3 +41,28 @@ def dupsV1(nums,i,v)->bool:
 
 for t,i,v in test_case:
     print(dups(t,i,v))
+
+import bisect
+
+def t1(arr,i,v):
+    left = 0
+    window = []
+    for right in range(len(arr)):
+        r = bisect.bisect_right(window,arr[right])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
