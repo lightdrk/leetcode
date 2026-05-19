@@ -1,13 +1,28 @@
 def solveNQueens(n):
-    solution = []
-    sol = ['.'*n]*n
-    def bk(dn,x,y,position,sol):
-        if dn == 0:
-            solution.append(sol[:])
+    output = []
+    matrix = ['.'*(n)]*n
+    def bk(i,dx,dy,v):
+        if i >= n:
+            output.append(matrix[:])
             return
-        for i in range(n):
-            for j in range(n):
-                if (i,j) in position:
+        for j in range(n):
+            if (j in v) or (i-j in dx) or (i+j in dy):
+                continue
+            old = matrix[i]
+            matrix[i] = matrix[i][:j]+'Q'+matrix[i][j+1:]
+            dx.add(i-j)
+            v.add(j)
+            dy.add(j+i)
+            bk(i+1,dx,dy,v)
+            dx.remove(i-j)
+            dy.remove(i+j)
+            v.remove(j)
+            matrix[i] = old
 
-        bk(dn-1,x,y,position,sol)
+    bk(0,set(),set(),set())
+    return output
+
+for t in range(1,7):
+    print(solveNQueens(t))
+
 
